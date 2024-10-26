@@ -2,6 +2,7 @@
 #define LAUNCHERWINDOW_H
 
 #include <QMainWindow>
+#include <QtNetwork/QNetworkRequest>
 
 class SDLWidget;
 
@@ -38,10 +39,15 @@ private:
     size_t bpp;
     QString startMap;
 
+    // Quaddicted website related
+    QString url;
+
+
 private slots:
     void on_pushButtonFindQExe_clicked();
     void on_pushButtonLaunchExe_clicked();
     void on_pushButtonFindMod_clicked();
+    void on_pushButtonQSync_clicked();
 
     void on_radioButtonRogue_clicked();
     void on_radioButtonHipnotic_clicked();

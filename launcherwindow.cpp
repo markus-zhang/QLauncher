@@ -51,6 +51,9 @@ LauncherWindow::LauncherWindow(QWidget *parent)
     this->aspect = ui->checkBoxAspect->isChecked();
 
     this->update_textEditFullString();
+
+    // QUADDICTED related
+    this->url = QString("https://www.quaddicted.com/reviews/");
 }
 
 LauncherWindow::~LauncherWindow()
@@ -120,6 +123,11 @@ void LauncherWindow::on_pushButtonLaunchExe_clicked()
         proc.setArguments(this->args);
         proc.startDetached();
     }
+}
+
+void LauncherWindow::on_pushButtonQSync_clicked()
+{
+    // As a test, just download Quaddicted review page to same folder
 }
 
 void LauncherWindow::on_radioButtonRogue_clicked()
